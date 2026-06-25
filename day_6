@@ -1,0 +1,67 @@
+#--------------------------------------:Roman To Int:-------------------------------------
+s = "LVIII"
+s = "MCMXCIV"
+
+s = "III"
+
+
+lis=[]
+for i in s:
+    lis.append(i)
+
+new=[]
+
+for i in range(len(lis)):
+     
+
+     if lis[i] == "I":
+        
+        new.append(1)
+
+     elif lis[i] == "V":
+        
+        new.append(5)
+
+     elif lis[i] == "X":
+        
+            new.append(10)
+
+     elif lis[i] == "L":
+        
+        new.append(50)
+
+
+     elif lis[i] == "C":
+        
+        new.append(100)
+
+     elif lis[i] == "D":
+        
+            new.append(500)
+
+     elif lis[i] == "M":
+        
+        new.append(1000)
+
+
+
+
+
+
+
+count=0
+for i in range(len(new)):
+    
+   if i+1 < len(new):
+
+        if new[i] < new[i+1] :
+        
+         count = count - new[i]
+
+
+        else:  
+
+             count = count + new[i]   
+
+
+print(count+new[-1])

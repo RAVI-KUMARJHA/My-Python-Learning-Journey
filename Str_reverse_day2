@@ -1,0 +1,43 @@
+
+"""Example 1:
+
+Input: s = "the sky is blue"
+Output: "blue is sky the"
+Example 2:
+
+Input: s = "  hello world  "
+Output: "world hello"
+Explanation: Your reversed string should not contain leading or trailing spaces.
+Example 3:
+
+Input: s = "a good   example"
+Output: "example good a"""""
+str="1hello worl d2"
+s=" a good   example "
+
+
+
+
+def reverseWords( s):
+    #   x=s.strip()
+    #   lis=[]
+    #   lis=x.split(" ")
+    #   lis.reverse()
+    #   for i in range(len(lis)):
+    #         lis[i]=lis[i].replace(" ","")
+    #   print(lis)
+    #   return " ".join(lis)
+
+     lis=[]
+     x=s.strip()
+     lis=x.split(" ")
+     lis.reverse()
+     while "" in lis:
+        lis.remove("")
+   
+     return(" ".join(lis))
+
+     
+
+
+print(reverseWords(s))     
